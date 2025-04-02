@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    button {
+      width: 75%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 2px solid #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      margin: 10px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(5px);
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Select User Type</h2>
+  <button th:onclick="'location.href=\'/login/astronomer\''">Login as Astronomer</button>
+  <button th:onclick="'location.href=\'/login/observer\''">Login as Science Observer</button>
+</div>
+</body>
+</html>
